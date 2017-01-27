@@ -29,7 +29,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    * @returns {Object}
    */
   var parseObject = function parseObject(input, fields) {
-    Object.keys(input).reduce(function (acc, key) {
+    return Object.keys(input).reduce(function (acc, key) {
       // eslint-disable-next-line no-param-reassign
       acc[key] = parse(input[key]);
       return acc;
@@ -94,20 +94,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     return parse(input, true);
   };
 
-  var exports = {
+  var simparse = {
     parse: parse,
     parseWithFields: parseWithFields
   };
 
   if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object' && !!module) {
-    module.exports = exports;
+    module.exports = simparse;
     /* eslint-disable no-undef */
   } else if (typeof define === 'function' && define.amd) {
     define(function () {
-      return exports;
+      return simparse;
     });
     /* eslint-disable no-undef */
   } else {
-    _this.simparse = exports;
+    _this.simparse = simparse;
   }
 })(this);

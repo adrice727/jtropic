@@ -17,7 +17,7 @@
    * @returns {Object}
    */
   const parseObject = (input, fields) => {
-    Object.keys(input).reduce((acc, key) => {
+    return Object.keys(input).reduce((acc, key) => {
       // eslint-disable-next-line no-param-reassign
       acc[key] = parse(input[key]);
       return acc;
@@ -76,18 +76,18 @@
    */
   const parseWithFields = input => parse(input, true);
 
-  const exports = {
+  const simparse = {
     parse,
     parseWithFields,
   };
 
   if (typeof exports === 'object' && !!module) {
-    module.exports = exports;
+    module.exports = simparse;
     /* eslint-disable no-undef */
   } else if (typeof define === 'function' && define.amd) {
-    define(() => exports);
+    define(() => simparse);
     /* eslint-disable no-undef */
   } else {
-    this.simparse = exports;
+    this.simparse = simparse;
   }
 })(this);
