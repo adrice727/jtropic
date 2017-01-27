@@ -1,0 +1,40 @@
+{
+  "name": "json-parse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/simparse",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015-script": "^1.1.0",
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "uglify-js": "^2.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src/simparse.js",
+    "build:babel": "babel -d ./dist/ ./src/ --presets=es2015-script",
+    "build:min": "uglifyjs ./dist/simparse.js -o ./dist/simparse.min.js",
+    "build": "npm run build:babel && npm run build:min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrice727/json-parse.git"
+  },
+  "keywords": [
+    "json",
+    "parse"
+  ],
+  "author": "adrice727@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrice727/json-parse/issues"
+  },
+  "homepage": "https://github.com/adrice727/json-parse#readme"
+}
