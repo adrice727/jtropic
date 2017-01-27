@@ -81,7 +81,7 @@
     parseWithFields,
   };
 
-  if (typeof exports === 'object') {
+  if (typeof exports === 'object' && !!module) {
     module.exports = exports;
     /* eslint-disable no-undef */
   } else if (typeof define === 'function' && define.amd) {
