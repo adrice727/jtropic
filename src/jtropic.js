@@ -76,18 +76,18 @@
    */
   const parseWithFields = input => parse(input, true);
 
-  const simparse = {
+  const jtropic = {
     parse,
     parseWithFields,
   };
 
   if (typeof exports === 'object' && !!module) {
-    module.exports = simparse;
+    module.exports = jtropic;
     /* eslint-disable no-undef */
   } else if (typeof define === 'function' && define.amd) {
-    define(() => simparse);
+    define(() => jtropic);
     /* eslint-disable no-undef */
   } else {
-    this.simparse = simparse;
+    this.jtropic = jtropic;
   }
 })(this);

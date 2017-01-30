@@ -2,7 +2,7 @@
   "name": "json-parse",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/simparse",
+  "main": "dist/jtropic",
   "directories": {
     "test": "test"
   },
@@ -18,9 +18,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./src/simparse.js",
+    "lint": "eslint ./src/jtropic.js",
     "build:babel": "babel -d ./dist/ ./src/ --presets=es2015-script",
-    "build:min": "uglifyjs ./dist/simparse.js -o ./dist/simparse.min.js",
+    "build:min": "uglifyjs ./dist/jtropic.js -o ./dist/jtropic.min.js",
     "build": "npm run build:babel && npm run build:min"
   },
   "repository": {
